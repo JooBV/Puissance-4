@@ -1,0 +1,95 @@
+*,
+*::before
+*::after
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    text-align: center;
+    
+}
+
+/* =======  Hover Effect ========== */
+
+a{
+    position: relative;
+    text-decoration: none;
+    padding: 0 8px;
+
+}
+
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #ffff;
+}
+
+a:hover:after{
+    width: 100%;
+}
+
+/* =========================== */
+
+.list-unstyled{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    padding: 1px 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header{
+    background: #1b003f;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.header .logo{
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    align-items: center;
+    color: rgb(255, 255, 255);
+
+}
+
+.header li{
+    display: inline-flex;
+    text-align: center;
+    padding: 0 5px;
+    font-size: 1rem;
+    text-transform: uppercase;   
+}
+
+.header a{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+.hero{
+    background:#1b003f;
+    padding: 18px 2rem;
+}
+
+
