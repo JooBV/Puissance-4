@@ -1,17 +1,43 @@
-*,
-*::before
-*::after
+/* Barre de navigation */
 
-* {
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.1rem;
-    margin: 0;
-    text-align: center;
-    
+nav{
+    outline:none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #130e30;
+}
+
+.logo{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-right: 30%;
+}
+
+.nav-links{
+    text-decoration:none;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    text-transform: uppercase;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
 }
 
 /* =======  Hover Effect ========== */
@@ -41,55 +67,105 @@ a:hover{
 a:hover:after{
     width: 100%;
 }
+  /* Fin Barre de navigation */
 
-/* =========================== */
+  /* Debut du Header */
 
-.list-unstyled{
+header{
+    background-color: #100d30;
+    padding-bottom: 30%;
+  }
+
+.title h2{
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    background-image: url(/assets/images/Banniere.png);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+.contact{
+    margin-bottom: 22px;
+    padding: 0.5rem 1rem;
+    padding-top: 10%;
+    align-items: flex-end;
+    padding-bottom: 4%;
+    color: blue;
+    display: flex;
+    justify-content: space-around;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.container{
-    padding: 1px 2rem;
+/* Form */
+
+form{
+    width: 40%;
+    max-width: 500px;
+    margin-left: 20%;
+}
+
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input, textarea{
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 0px solid #fff;
+    background: #282546;
+    font-size: 15px;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: gray;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button{
+    padding: 10px 0;
+    background: #f88d00;
+    outline: none;
+    color: #fff;
+    width: 15%;
+}
+
+input:focus~label,
+input:valid~label
+textarea:focus~label
+textarea:valid~label{
+
+    top: -35px;
+    font-size: 14px;
+
+}
+
+.row{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.header{
-    background: #1b003f;
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
-
-.header .logo{
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    align-items: center;
-    color: rgb(255, 255, 255);
-
-}
-
-.header li{
-    display: inline-flex;
-    text-align: center;
-    padding: 0 5px;
-    font-size: 1rem;
-    text-transform: uppercase;   
-}
-
-.header a{
-    color: white;
-}
-
-h2{
-    color: white;
-}
-
-.hero{
-    background:#1b003f;
-    padding: 18px 2rem;
+.row .input-group{
+    flex-basis: 48%;
 }
 
 
+/* Debut du footer */
+
+footer{
+     background-color: #0e0a28;
+     padding-bottom: 30%;
+}
+
+/* Fin du footer */

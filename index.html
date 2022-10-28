@@ -10,29 +10,70 @@
 </head>
 <body>
 
-    <!-- Partie header -->
-    
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                By Jordan mémory
-            </div>
+    <!-- Debut de la barre de navigation -->
 
-    <!-- Partie  menu navbar -->
-
-            <nav class="navbar">
-                <ul class="menu list-untyled">
-                    <li><a href="#hero">Accueil</a></li>
-                    <li><a href="#jeu">Jeu</li></a></li>
-                    <li><a href="#scores">Scores</a></li>
-                    <li><a href="#contact">Nous contacter</a></li>
-            </nav>
+    <nav>
+        <div class="logo">
+            <h1>The power Of <span>Memory</span></h1>
         </div>
+        <u class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Jeu</a></li>
+            <li><a href="#">Scores</a></li>
+            <li><a href="#">Nous contacter</a></li>
+        </u>
+    </nav>
+
+    <!-- Fin de la barre de navigation -->
+
+    <!-- Debut du header -->
+
+    <header>
+        <div class="title">
+            <h2>Nous contacter</h2>
+            <ul class="contact">
+                <li>06 05 04 03 02 01</li>
+                <li>support@powerofmemory</li>
+                <li>Paris</li>
+            </ul>
+        </div>
+
+
+        <form>
+            <div class="row">
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name"> Nom</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="Email" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+        <div class="input-group">
+            <input type="text" id="Sujet" required>
+            <label for="sujet">Sujet</label>
+        </div>
+        <div class="input-group">
+            <textarea name="message" id="message" rows="10" required></textarea>
+            <label for="message">Your Message</label>
+        </div>
+        <button type="envoyer">Envoyer</button>
+        </form>
     </header>
-    <section id="hero" class="hero">
-        <h2 class="title">Nous contacter</h2>
-    </section>
-    
+
+    <!-- Fin du header -->
+
+
+    <!-- Debut du footer -->
+
+    <footer>
+        <div>
+            <h4>Infomartion</h4>
+        </div>
+    </footer>
+
+    <!-- Fin du footer -->
 
 </body>
 </html>
