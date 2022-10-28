@@ -1,0 +1,75 @@
+* {
+    color: white;
+    background-color: rgb(15, 14, 46)
+}
+
+
+.tête {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img {
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    background-image: url(https://cdn.discordapp.com/attachments/1020320775426805790/1035512948594061382/Banniere.png);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+
+.inscri {
+    background-color: orange;
+}
+
+
+.right {
+    text-align: right;
+}
+
+
+.left {
+    text-align: left;
+}
+
+
+.centrer {
+    text-align: center;
+}
+
+
+.formulaire {
+    margin-top: 150px;
+}
+
+form input[type="password"]
+form input[type="text"]
+form button[type="submit"]
+
+form button[type="submit"] {
+    font-weight: bold;
+
+    background-color: orange;
+}
+
+form button[type="submit"]:focus,
+form button[type="submit"]:hover {
+    background-color: orange;
+}
+
+footer {
+    position: fixed;
+    left: 50;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(14,11,38);
+ }
+
+
+ b {
+    color: orange;
+ }
