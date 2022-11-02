@@ -197,20 +197,12 @@ footer{
      color: white;
 }
 
-.TitreInfo{
-    display: flex;
 
 
-}
-
-.TitreMemory{
-    display: flex;
-    
+.OrangeCharacter{
+    color: #f88d00;
 }
 
 .ResauSociauxLogo{
-}
-
-.FaceBook{
-    color: white;
+    padding-top: 10px;
 }
