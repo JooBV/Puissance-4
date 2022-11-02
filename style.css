@@ -1,31 +1,9 @@
-* {
+body {
     color: white;
-    background-color: rgb(15, 14, 46)
+    background: rgb(15, 14, 46);
+
+    font-family: Arial, sans-serif;
 }
-
-
-.tête {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.img {
-    color: white;
-    padding-top: 5%;
-    padding-bottom: 4%;
-    background-image: url(https://cdn.discordapp.com/attachments/1020320775426805790/1035512948594061382/Banniere.png);
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    text-transform: uppercase;
-}
-
-
-.inscri {
-    background-color: orange;
-}
-
 
 .right {
     text-align: right;
@@ -42,34 +20,130 @@
 }
 
 
-.formulaire {
-    margin-top: 150px;
+
+
+/* 
+ En-tête
+ */
+.tête {
+    display: flex;
+    justify-content: space-between;
 }
 
-form input[type="password"]
-form input[type="text"]
-form button[type="submit"]
+a {
+    color: white;
+
+    margin-top: 18px;
+}
+
+a {
+    text-decoration: none;
+    background: linear-gradient(to top, red 0%, red 10%, transparent 10.1%) no-repeat left bottom / 0 100%;
+    background-position: bottom right;
+    transition: background-size .3s;
+}
+
+a:hover {
+    background-position: bottom left;
+    background-size: 100% 100%;
+    color: red;
+}
+
+
+/*
+Image
+*/
+.img {
+    color: white;
+
+    padding-top: 5%;
+    padding-bottom: 4%;
+
+    background-image: url(https://cdn.discordapp.com/attachments/1020320775426805790/1035512948594061382/Banniere.png);
+    
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+
+
+/*
+Formulaire
+*/
+section.login-container {
+    display: flex;
+
+    top: 90; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+
+section.login-container>div {
+    width: 400px;
+
+    margin: auto;
+
+    padding: 0px;
+
+    text-align: center;
+
+    background: rgb(15, 14, 46);
+}
+
+section.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"] {
+
+    background-color: rgb(39, 38, 69);
+
+    margin-bottom: 20px;
+    padding: 10px;
+
+    color: #333;
+
+    border: 1px;
+    border-radius: 5px;
+
+    outline: 0;
+}
 
 form button[type="submit"] {
     font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+
+    border: 2px;
+    border-radius: 5px;
+    width: 200px;
 
     background-color: orange;
 }
 
-form button[type="submit"]:focus,
-form button[type="submit"]:hover {
-    background-color: orange;
-}
 
+
+/* 
+Pied de page
+*/
 footer {
     position: fixed;
+
     left: 50;
     bottom: 0;
     width: 100%;
-    background-color: rgb(14,11,38);
- }
+    
+    background-color: rgb(14, 11, 38);
+}
 
 
- b {
+b {
     color: orange;
- }
+}
