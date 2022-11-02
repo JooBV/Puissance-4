@@ -34,6 +34,7 @@ a {
     color: white;
 
     margin-top: 18px;
+    margin-right: 5px;
 }
 
 a {
@@ -108,7 +109,7 @@ form input[type="submit"] {
     margin-bottom: 20px;
     padding: 10px;
 
-    color: #333;
+    color: white;
 
     border: 1px;
     border-radius: 5px;
