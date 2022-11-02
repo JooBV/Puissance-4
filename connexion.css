@@ -1,0 +1,33 @@
+*{
+    color: white;
+    background-color: rgb(15 14 46)
+}
+body {
+    color: rgb(252, 252, 252);
+    background-color: rgb(15, 14, 46) 
+}
+
+.top {
+    display: flex;
+    justify-content: space-around;
+}
+.mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+.AllBot {
+    display: flex;
+    justify-content: space-between;
+}
+.bot {
+    display: left;
+    justify-content: space-between;
+}
+.bot2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
