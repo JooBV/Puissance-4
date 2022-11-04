@@ -1,46 +1,3 @@
-*{
-    color: white;
-    background-color: rgb(15 14 46)
-}
-body {
-    color: rgb(252, 252, 252);
-    background-color: rgb(15, 14, 46) 
-}
-
-.top1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.BIENVENUE {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.VENEZ {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.BOUTON {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.PHOTO {
-    display: flex;
-   justify-content: center;
-}
-.DESCRIPTION {
-    display: flex;
-    justify-content: center;
-}
-.MidLow {
-    flex-wrap: wrap;
-}
-/*--------------------------------------------*/
-
 /* Debut du footer */
 
 .footer{
@@ -50,7 +7,7 @@ body {
     justify-content: space-around;
 }
 
-.Tittre-footer{
+.Tittre-Footer{
     color: white;
 
 }

@@ -1,0 +1,93 @@
+/* Barre de navigation */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+nav{
+    top: 0;
+    position:sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    padding-bottom: 20px;
+    background-color: #130e30;
+}
+
+.logo{
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 0;
+    position:sticky;
+    color: white;
+    letter-spacing: 2px;
+    padding-right: 30%;
+}
+
+.nav-links{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration:none;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    text-transform: uppercase;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* =======  Hover Effect ========== */
+
+.links{
+    position: relative;
+    text-decoration: none;
+    padding: 0 6px;
+
+}
+.links:after{
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.links:hover{
+    color: #ffff;
+}
+
+.links:hover:after{
+    width: 100%;
+}
+  /* Fin Barre de navigation */
+
+header{
+    background-color: #100d30;
+    padding-bottom: 10%;
+}
+
+.title h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    background-image: url(/assets/images/Banniere.png);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
