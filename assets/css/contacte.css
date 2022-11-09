@@ -1,0 +1,100 @@
+.title h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 4%;
+    background-image: url(/assets/images/Banniere.png);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+.contact{
+    color: white;
+    margin-bottom: -25px;
+    padding-left: 134px;
+    padding-top: 6%;
+    text-align: center;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.contener{
+    
+    background-color: #0e0a28;
+    padding-top: 5%;
+    width: 230px;
+    height: 130px;
+}
+
+
+/* Debut du Form */
+
+form{
+    width: 40%;
+    max-width: 490px;
+    margin-left: 211px;
+}
+
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input, textarea{
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 0px solid #fff;
+    background: #282546;
+    font-size: 15px;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: gray;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button{
+    border: 0px solid #fff;
+    padding: 13px 0px;
+    background: #f88d00;
+    outline: none;
+    color: #fff;
+    width: 15%;
+    cursor: pointer;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+
+    top: -35px;
+    font-size: 14px;
+
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row .input-group{
+    flex-basis: 48%;
+}
+
+/* Fin du Form */
+
+
+
