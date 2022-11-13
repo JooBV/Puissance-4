@@ -1,22 +1,30 @@
 /*
 Formulaire
 */
+
+body {
+    color: white;
+    background-color: rgb(23, 0, 47);
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 section.login-container {
     display: flex;
     background:#130e30;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    top: 90; 
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 
 section.login-container div {
-    width: 1154px;
-    margin-left: 250px;
-    padding: 0px;
+    width: 60%;
+    margin-left: 20%;
     text-align: center;
     background: rgb(15, 14, 46);
 }
@@ -58,9 +66,6 @@ form button[type="submit"] {
     width: 15%;
     cursor: pointer;
 }
-
-
-
 /* 
 Pied de page
 */

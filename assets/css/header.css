@@ -13,7 +13,6 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
     padding-bottom: 20px;
     background-color: #130e30;
 }
@@ -23,9 +22,10 @@ nav{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     top: 0;
     position:sticky;
+    padding-top: 20px;
     color: white;
     letter-spacing: 2px;
-    padding-right: 30%;
+    padding-right: 20%;
 }
 
 .nav-links{
@@ -33,7 +33,7 @@ nav{
     text-decoration:none;
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 40%;
     text-transform: uppercase;
 }
 
