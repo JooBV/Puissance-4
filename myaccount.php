@@ -1,3 +1,7 @@
+<?php
+include "includes/database.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +71,7 @@
     </section>
     </div>
     <!--Informations sur les contact et les lieux de location-->
-    
+
     <!-- Inprotation du footer -->
 
     <?php
@@ -77,4 +81,5 @@
     <!-- Fin Inprotation du footer -->
 
 </body>
+
 </html>

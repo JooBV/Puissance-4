@@ -1,3 +1,16 @@
+<?php
+include "includes/database.inc.php";
+$positions_user = 0;
+
+$i = 1;
+do {
+    $positions_user++;
+    $i - 1;
+} while ($i <= 0);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +31,7 @@
 
     <?php
     require_once 'view/header.inc.php';
+
     ?>
 
     <!-- Fin Inprotation du header -->
@@ -25,20 +39,92 @@
         <div class="title">
             <h2>Scores</h2>
             <table class="score">
-                <tr>
-                    <th>Nom du jeu</th>
-                    <th>Pseudo</th>
-                    <th>Niveau de difficulté</th>
-                    <th>Score</th>
-                    <th>Date</th>
-                </tr>
-                <tr>
-                    <td>Memory</td>
-                    <td>mon pseudo</td>
-                    <td>Difficile</td>
-                    <td>2988</td>
-                    <td>jour/mois/annee</td>
-                </tr>
+
+                <div class="info-classement">
+                    <tr class="bloc-classement">
+                        <th class="classement">Top frage</th>
+                        <th class="classement">Nom du jeu</th>
+                        <th class="classement">Pseudo</th>
+                        <th class="classement">Niveau de difficulté</th>
+                        <th class="classement">Score</th>
+                        <th class="classement">Date</th>
+                    </tr>
+                </div>
+
+                <?php
+                $sqlbs = 'SELECT Nom_du_jeu  
+                  FROM jeu 
+                  WHERE id= 1';
+                $stmtbs = $db->prepare($sqlbs);
+                $stmtbs->execute();
+
+
+
+                $stmtbs = $stmtbs->fetchAll();
+                foreach ($stmtbs as $nomJeu) {
+                }
+                $nomJeu = $nomJeu['Nom_du_jeu'];
+                ?>
+
+                <!-- NOM DU JEU -->
+
+
+                <?php
+                $sqlbs = 'SELECT Pseudo 
+                  FROM utilisateur
+                  INNER JOIN score ON score.id_joueur = utilisateur.id
+                  ORDER BY Score_de_la_partie ASC ';
+                $stmtbs = $db->prepare($sqlbs);
+                $stmtbs->execute();
+
+
+
+                $stmtbs = $stmtbs->fetchAll();
+                foreach ($stmtbs as $userPseudo) {
+                }
+                $userPseudo = $userPseudo['Pseudo'];
+                ?>
+
+                <!-- PSEUDO -->
+
+                <div class="info-jeu">
+                    <tr class="bloc-jeu">
+                        <th class="info-joueur">#1</th>
+                        <th class="info-joueur"><?= $nomJeu ?></th>
+                        <th class="info-joueur"><?= $userPseudo ?></th>
+                        <th class="info-joueur">Niveau de difficulté</th>
+                        <th class="info-joueur">Score</th>
+                        <th class="info-joueur">Date</th>
+                    </tr>
+                    <tr class="bloc-jeu">
+                        <th class="info-joueur">#2</th>
+                        <th class="info-joueur">Nom du jeu</th>
+                        <th class="info-joueur">Pseudo</th>
+                        <th class="info-joueur">Niveau de difficulté</th>
+                        <th class="info-joueur">Score</th>
+                        <th class="info-joueur">Date</th>
+                    </tr>
+                    <tr class="bloc-jeu">
+                        <th class="info-joueur">#3</th>
+                        <th class="info-joueur">Nom du jeu</th>
+                        <th class="info-joueur">Pseudo</th>
+                        <th class="info-joueur">Niveau de difficulté</th>
+                        <th class="info-joueur">Score</th>
+                        <th class="info-joueur">Date</th>
+                    </tr>
+                    <tr class="bloc-jeu">
+                        <th class="info-joueur">#<?= $positions_user ?></th>
+                        <th class="info-joueur">Nom du jeu</th>
+                        <th class="info-joueur">Pseudo</th>
+                        <th class="info-joueur">Niveau de difficulté</th>
+                        <th class="info-joueur">Score</th>
+                        <th class="info-joueur">Date</th>
+                    </tr>
+                </div>
+
+
+
+
             </table>
         </div>
         <!--Informations sur les contact et les lieux de location-->
@@ -50,7 +136,6 @@
         ?>
 
         <!-- Fin Inprotation du footer -->
-
 </body>
 
 </html>

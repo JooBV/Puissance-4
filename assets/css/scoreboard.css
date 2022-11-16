@@ -6,6 +6,7 @@ body {
 
 }
 
+
 a {
     text-decoration: none;
     color: #FFFFFF;
@@ -16,29 +17,53 @@ a:hover {
     text-decoration: none;
 }
 
-#title {
-    padding: 120px 0 120px 0;
-    width: 100%;
-    text-align: center;
-}
+
 
 .score {
     width: 100%;
-    margin-bottom: 15%;
-    margin-top: 15%;
+    margin-bottom: 7%;
+    margin-top: 7%;
 }
 
-th, td {
+.info-classement{
+    padding-top: 100px;
+}
+
+.bloc-classement{
+    list-style: none;
+    display: flex;
     padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: solid white;
 }
 
-th {
-    border: 3px solid #909090;
-    border-radius: 10px;
-    background-color: #1e044a;
+.classement{
+    background-color: coral;
 }
 
-tr ,td {
-    border: 3px solid #909090;
+/* partie info jeu */
+
+.info-jeu{
+    padding-top: 100px;
+}
+
+
+.bloc-jeu{
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
     border-radius: 10px;
+    border: solid white;
+}
+
+.info-joueur{
+    background-color: crimson;
 }

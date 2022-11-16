@@ -12,16 +12,16 @@ body {
 .leJeu {
     margin-top: 5%;
     margin-bottom: 10%;
-    background-color: rgb(18, 0, 37);
 }
 
 .les-Difficultes {
     height: 70px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(200, 17, 237);
+    background-color: #0e0a28;
     border-radius: 10px;
     margin-bottom: 5%;
 
@@ -29,9 +29,9 @@ body {
 
 .les-Difficultes2 {
 
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
 }
 
@@ -42,7 +42,7 @@ body {
 .les-Tableaux {
     display: flex;
     flex-direction: column;
-    background-color: rgb(139, 184, 255);
+    background-color: #0e0a28;
     border-radius: 10px;
     padding-bottom: 10px;
 

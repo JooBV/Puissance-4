@@ -1,3 +1,7 @@
+<?php
+include "includes/database.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -48,4 +52,5 @@
             <!-- Fin Inprotation du footer -->
 
 </body>
+
 </html>
