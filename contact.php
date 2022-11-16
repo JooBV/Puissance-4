@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <meta name="description" content="memory">
-    <link rel="stylesheet" href="/assets/css/contacte.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/contacte.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <script src="https://kit.fontawesome.com/f6ebfda22d.js" crossorigin="anonymous"></script>
 </head>
 <body>

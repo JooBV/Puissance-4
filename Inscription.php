@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/inscri.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/inscri.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <script src="https://kit.fontawesome.com/f6ebfda22d.js" crossorigin="anonymous"></script>
     <title>Inscription</title>
 </head>
