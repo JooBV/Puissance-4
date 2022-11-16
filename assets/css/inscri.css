@@ -1,6 +1,7 @@
 /*
 Formulaire
 */
+<<<<<<< HEAD
 section.login-container {
     display: flex;
     background:#130e30;
@@ -10,13 +11,38 @@ section.login-container {
     bottom: 0;
     left: 0;
     right: 0;
+=======
+
+body {
+    color: white;
+    background-color: rgb(23, 0, 47);
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section.login-container {
+    display: flex;
+    background:#130e30;
+    margin-top: 5%;
+    margin-bottom: 5%;
+>>>>>>> Jordan
 }
 
 
 section.login-container div {
+<<<<<<< HEAD
     width: 1154px;
     margin-left: 250px;
     padding: 0px;
+=======
+    width: 60%;
+    margin-left: 20%;
+>>>>>>> Jordan
     text-align: center;
     background: rgb(15, 14, 46);
 }
@@ -58,9 +84,12 @@ form button[type="submit"] {
     width: 15%;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> Jordan
 /* 
 Pied de page
 */

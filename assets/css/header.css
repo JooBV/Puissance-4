@@ -13,7 +13,10 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+<<<<<<< HEAD
     min-height: 8vh;
+=======
+>>>>>>> Jordan
     padding-bottom: 20px;
     background-color: #130e30;
 }
@@ -23,9 +26,16 @@ nav{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     top: 0;
     position:sticky;
+<<<<<<< HEAD
     color: white;
     letter-spacing: 2px;
     padding-right: 30%;
+=======
+    padding-top: 20px;
+    color: white;
+    letter-spacing: 2px;
+    padding-right: 20%;
+>>>>>>> Jordan
 }
 
 .nav-links{
@@ -33,7 +43,11 @@ nav{
     text-decoration:none;
     display: flex;
     justify-content: space-around;
+<<<<<<< HEAD
     width: 30%;
+=======
+    width: 40%;
+>>>>>>> Jordan
     text-transform: uppercase;
 }
 
@@ -85,7 +99,11 @@ header{
     color: white;
     padding-top: 5%;
     padding-bottom: 4%;
+<<<<<<< HEAD
     background-image: url(/assets/images/Banniere.png);
+=======
+    background-image: url("../images/Banniere.png");
+>>>>>>> Jordan
     text-align: center;
     display: flex;
     justify-content: space-around;
