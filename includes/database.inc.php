@@ -2,16 +2,12 @@
 
 $user = "root";
 $pass = "root";
+$dbname = "Projet_Puissance";
+$host = "localhost";
 
 try{
-$db = new PDO('mysql:host=localhost;dbname=Projet_Puissance;charset=utf8', 'root', 'root');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
-}
-
-
-catch (PDOException $e){
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
+} catch (PDOException $e){
     echo "connexion erreur" .$e->getMessage();
 }
-
-
-?>

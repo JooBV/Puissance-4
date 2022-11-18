@@ -1,6 +1,59 @@
 <?php
 include "includes/database.inc.php";
+
+
+$valid = true;
+$err = array();
+
+$date = new DateTime('now', new DateTimeZone('Europe/Paris'));
+$date = $date->format('m/d/Y h:i:s a');
+
+if (isset($_POST['submit'])) {
+    $mail = trim($_POST['email']);
+    $pseudo = trim($_POST['pseudojoueur']);
+    $password = trim($_POST['mdp']);
+    $confpassword = trim($_POST['confmdp']);
+
+    if (!isset($_POST['email'])) {
+        $valid = false;
+        $err['email'] = " Ce champ en peut pas être vide";
+    }
+    if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        $valid = false;
+        $err[''] = "Email not valid";
+    }
+
+    if (!isset($_POST['pseudojoueur'])) {
+        $valid = false;
+        $err['pseudojoueur'] = " Ce champ ne peut pas être vide";
+    }
+
+    if (!isset($_POST['mdp'])) {
+        $valid = false;
+        $err['mdp'] = " Ce champ ne peut pas être vide";
+    }
+
+    if (!isset($_POST['confmdp'])) {
+        $valid = false;
+        $err['confmdp'] = "Ce champ ne peut pas être vide";
+    }
+
+    if ($password !== $confpassword) {
+        $valid = false;
+        $err[''] = "Le mot de passe est différant de la confiramation";
+    }
+
+    if ($valid == true) {
+        $req = "INSERT INTO utilisateur (Email, passwd, Pseudo, Date_heure_inscription) VALUES (?, ?, ?, NOW())";
+        $stmt = $conn->prepare($req);
+        $stmt->execute([$mail, $password, $pseudo]);
+    }
+}
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,39 +70,48 @@ include "includes/database.inc.php";
 <body>
 
 
-    <!-- Inprotation du header -->
+    <!-- Improtation du header -->
 
     <?php
     require_once 'view/header.inc.php';
     ?>
 
-    <!-- Fin Inprotation du header -->
+    <!-- Fin Improtation du header -->
 
     <!-- Début du header -->
     <header>
         <div class="title">
             <h2>Inscription</h2>
             <!-- Titre du header -->
+        </div>
+        <form method="post">
 
-            <section class="login-container">
-                <div>
-                    <form action="" method="post">
-                        <input type="text" name="mail" placeholder="Email" required />
-                        <input type="text" name="pseudo" placeholder="Pseudo" required />
-                        <input type="password" name="password" placeholder="Mot de passe" required />
-                        <input type="password" name="password" placeholder="Confirmez votre mot de passe" required />
-                        <button type="submit">Inscription</button>
-                    </form>
+            <?php if (!$valid) : ?>
+                <div class="error">
+                    <?php foreach ($err as $message) : ?>
+                        <div><?php echo htmlspecialchars($message); ?></div>
+                    <?php endforeach; ?>
                 </div>
-            </section>
+            <?php endif; ?>
 
-            <!-- Inprotation du footer -->
+            <input type="text" id="email" name="email" value="<?php if (isset($mail)) {echo $mail;} ?>" placeholder="Email" />
 
-            <?php
-            require_once 'view/footer.inc.php';
-            ?>
+            <input type="text" id="pseudojoueur" name="pseudojoueur" value="<?php if (isset($pseudo)) {echo $pseudo;} ?>" placeholder="Pseudo" />
 
-            <!-- Fin Inprotation du footer -->
+            <input type="password" id="mdp" name="mdp" value="<?php if (isset($password)) {echo $password;} ?>" placeholder="Mot de passe" />
+
+            <input type="password" id="confmdp" name="confmdp" value="<?php if (isset($confpassword)) {echo $confpassword;} ?>" placeholder="Confirmez votre mot de passe" />
+
+            <button type="submit" value="submit" name="submit" id="submit">Inscription</button>
+        </form>
+
+        <!-- Improtation du footer -->
+
+        <?php
+        require_once 'view/footer.inc.php';
+        ?>
+
+        <!-- Fin Improtation du footer -->
 
 </body>
 

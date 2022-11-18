@@ -85,7 +85,7 @@ do {
                 $userPseudo = $userPseudo['Pseudo'];
                 ?>
 
-                <!-- PSEUDO -->
+                
 
                 <div class="info-jeu">
                     <tr class="bloc-jeu">
