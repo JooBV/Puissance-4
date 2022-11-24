@@ -70,6 +70,12 @@ include "includes/database.inc.php";
         </table>
     </div>
 
+
+    <?php
+    $requet = $conn->query('SELECT COUNT(id) FROM score');
+    $repons = $requet->fetch();
+    ?>
+
     <!--Infos données du jeu-->
     <div class="backgroundDonnees">
 
@@ -81,7 +87,7 @@ include "includes/database.inc.php";
                 <div class="allDonnees">
                     <div class="Box1">
                         <div class="Bloc1">
-                            <p id="textBox">310</p>
+                            <p id="textBox"><?= $repons["COUNT(id)"]?></p>
                             <p>Parties Jouées</p>
                         </div>
                         <div class="Bloc2">
