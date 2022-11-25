@@ -44,5 +44,3 @@
             <!-- Fin Inprotation du footer -->
 
 </body>
-
-</html>

@@ -1,3 +1,7 @@
+<?php
+include 'assets/includes/database.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +53,7 @@
 
         <!-- Début du form -->
 
-        <form>
+        <form method="post" name="formulaire">
             <div class="row">
                 <div class="input-group">
                     <input type="text" id="name" required>

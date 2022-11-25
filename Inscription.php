@@ -1,3 +1,24 @@
+<?php
+include 'assets/includes/database.inc.php';
+
+
+$email = 'Email'
+$pseudo = 'Pseudo'
+$mdp = 'Mot_de_passe'
+$cmdp = '' 
+$error = ''
+
+if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+    echo "L'adresse e-mail est valide";
+  }
+  else
+  {
+    echo "L'adresse e-mail est invalide";
+  }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -46,6 +67,3 @@
             ?>
 
             <!-- Fin Inprotation du footer -->
-
-</body>
-</html>

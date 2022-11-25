@@ -1,3 +1,31 @@
+<?php
+
+include 'assets/includes/database.inc.php'; 
+
+
+$scores = $bdd->prepare ('SELECT jeu.nomJeu, pseudo, score, niveau, date_heure_partie FROM score
+INNER JOIN utilisateur ON score.id_joueur = utilisateur.id
+INNER JOIN jeu ON score.id_jeu = jeu.id
+ORDER BY score DESC');
+
+$scores->execute();
+$scores = $scores-> fetchAll();
+
+foreach($scores as $score) { ?>
+
+    <tr>
+
+    <td> <?php echo $score['nomJeu'] ?> </td>
+    <td> <?php echo $score['pseudo'] ?></td>
+    <td> <?php echo $score['score'] ?></td>
+    <td> <?php echo $score['niveau'] ?></td>
+    <td> <?php echo $score['date_heure_partie'] ?> </td>
+
+    </tr>
+
+<?php   }   ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,13 +59,6 @@
                     <th>Niveau de difficulté</th>
                     <th>Score</th>
                     <th>Date</th>
-                </tr>
-                <tr>
-                    <td>Memory</td>
-                    <td>mon pseudo</td>
-                    <td>Difficile</td>
-                    <td>2988</td>
-                    <td>jour/mois/annee</td>
                 </tr>
             </table>
         </div>
