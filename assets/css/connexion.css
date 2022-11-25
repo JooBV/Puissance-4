@@ -1,0 +1,71 @@
+/*
+Formulaire
+*/
+
+body {
+    color: white;
+    background-color: rgb(23, 0, 47);
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section.login-container {
+    display: flex;
+    background:#130e30;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+section.login-container div {
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    background: rgb(15, 14, 46);
+}
+
+section.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    border: 0px solid #fff;
+    padding: 13px 0px;
+    background: #f88d00;
+    outline: none;
+    color: #fff;
+    width: 15%;
+    cursor: pointer;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"] {
+
+    background-color: rgb(39, 38, 69);
+    margin-bottom: 20px;
+    padding: 10px;
+    color: white;
+    border: 1px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+form button[type="submit"] {
+    border: 0px solid #fff;
+    padding: 13px 0px;
+    background: #f88d00;
+    outline: none;
+    color: #fff;
+    width: 15%;
+    cursor: pointer;
+}
+/* 
+Pied de page
+*/

@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    background-color: #10002B;
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: rgb(84, 189, 224);
+    text-decoration: none;
+}
+
+
+
+.score {
+    width: 100%;
+    margin-bottom: 7%;
+    margin-top: 7%;
+}
+
+.info-classement{
+    padding-top: 100px;
+}
+
+.bloc-classement{
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: solid white;
+}
+
+.classement{
+    background-color: coral;
+}
+
+/* partie info jeu */
+
+.info-jeu{
+    padding-top: 100px;
+}
+
+
+.bloc-jeu{
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: solid white;
+}
+
+.info-joueur{
+    background-color: crimson;
+}

@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(23, 0, 47);
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.leJeu {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.les-Difficultes {
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0e0a28;
+    border-radius: 10px;
+    margin-bottom: 5%;
+
+}
+
+.les-Difficultes2 {
+
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.lesDifficultes2:hover {
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+}
+
+.les-Tableaux {
+    display: flex;
+    flex-direction: column;
+    background-color: #0e0a28;
+    border-radius: 10px;
+    padding-bottom: 10px;
+
+
+}
+
+.tableau1 {
+    background-color: rgb(56, 56, 56);
+    border-spacing: 5px;
+    border-radius: 5px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td1 {
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 213, 0);
+}
+
+.box1 {
+    display: flex;
+    justify-content: center;
+}
+
+.tableau2 {
+    background-color: rgb(56, 56, 56);
+    border-spacing: 5px;
+    border-radius: 5px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td2 {
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 213, 0);
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+}
+
+.tableau3 {
+    background-color: rgb(56, 56, 56);
+    border-spacing: 5px;
+    border-radius: 5px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td3 {
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 213, 0);
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+}
+
+.tableau4 {
+    background-color: rgb(56, 56, 56);
+    border-spacing: 5px;
+    border-radius: 5px;
+    margin-right: auto; 
+    margin-left: auto
+}
+
+.td4 {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 213, 0);
+}
+
+.box4 {
+    display: flex;
+    justify-content: center;
+}
