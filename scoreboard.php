@@ -9,19 +9,7 @@ ORDER BY score DESC');
 $scores->execute();
 $scores = $scores-> fetchAll();
 
-foreach($scores as $score) { ?>
-
-    <tr>
-    
-    <td> <?php echo $score['nomJeu'] ?> </td>
-    <td> <?php echo $score['pseudo'] ?></td>
-    <td> <?php echo $score['score'] ?></td>
-    <td> <?php echo $score['niveau'] ?></td>
-    <td> <?php echo $score['date_heure_partie'] ?> </td>
-
-    </tr>
-
-<?php   } ?>
+?>
 
 
 <!DOCTYPE html>
@@ -49,19 +37,41 @@ foreach($scores as $score) { ?>
         <div class="title">
             <h2>Scores</h2>
             <!-- Partie du tableau -->
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Non du Jeu</th>
-                        <th>Pseudo</th>
-                        <th>Niveau de difficulté</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            <div class="tableau">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Non du Jeu</th>
+                            <th>Pseudo</th>
+                            <th>Niveau de difficulté</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($scores as $score) { ?>
+
+                            <tr>
+
+                            <td> <?php echo $score['nomJeu'] ?> </td>
+                            <td> <?php echo $score['pseudo'] ?></td>
+                            <td> <?php echo $score['score'] ?></td>
+                            <td> <?php echo $score['niveau'] ?></td>
+                            <td> <?php echo $score['date_heure_partie'] ?> </td>
+
+                            </tr>
+
+                            <?php   } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+
+            <!-- Fin du tableau -->
+
+            <!--Informations sur les contact et les lieux de location-->
+
+            <!-- Inprotation du footer -->
 
             <?php
             require_once 'view/footer.inc.php';

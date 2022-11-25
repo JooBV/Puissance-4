@@ -40,6 +40,14 @@ Image
 /*
 Tableau
 */
+
+.tableau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 .table-style  {
     border-collapse: collapse;
     box-shadow: 0 5px 50px rgba(0,0,0,0.15);
