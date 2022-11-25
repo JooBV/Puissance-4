@@ -1,13 +1,10 @@
 <?php
 include "includes/database.inc.php";
-$positions_user = 0;
+?>
 
-$i = 1;
-do {
-    $positions_user++;
-    $i - 1;
-} while ($i <= 0);
-
+<?php
+$requet = $conn->query('SELECT * FROM score INNER JOIN jeu ON jeu.id = score.id_jeu INNER JOIN utilisateur ON utilisateur.id = score.id_joueur WHERE score.id = 1');
+$reponse = $requet->fetch();
 ?>
 
 
@@ -26,116 +23,74 @@ do {
 </head>
 
 <body>
-
     <!-- Inprotation du header -->
-
     <?php
     require_once 'view/header.inc.php';
-
     ?>
-
     <!-- Fin Inprotation du header -->
+
     <header>
         <div class="title">
             <h2>Scores</h2>
-            <table class="score">
-
-                <div class="info-classement">
-                    <tr class="bloc-classement">
-                        <th class="classement">Top frage</th>
-                        <th class="classement">Nom du jeu</th>
-                        <th class="classement">Pseudo</th>
-                        <th class="classement">Niveau de difficulté</th>
-                        <th class="classement">Score</th>
-                        <th class="classement">Date</th>
+            <!-- Partie du tableau -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Non du Jeu</th>
+                        <th>Pseudo</th>
+                        <th>Niveau de difficulté</th>
+                        <th>Score</th>
                     </tr>
-                </div>
-
-                <?php
-                $sqlbs = 'SELECT Nom_du_jeu  
-                  FROM jeu 
-                  WHERE id= 1';
-                $stmtbs = $db->prepare($sqlbs);
-                $stmtbs->execute();
-
-
-
-                $stmtbs = $stmtbs->fetchAll();
-                foreach ($stmtbs as $nomJeu) {
-                }
-                $nomJeu = $nomJeu['Nom_du_jeu'];
-                ?>
-
-                <!-- NOM DU JEU -->
-
-
-                <?php
-                $sqlbs = 'SELECT Pseudo 
-                  FROM utilisateur
-                  INNER JOIN score ON score.id_joueur = utilisateur.id
-                  ORDER BY Score_de_la_partie ASC ';
-                $stmtbs = $db->prepare($sqlbs);
-                $stmtbs->execute();
-
-
-
-                $stmtbs = $stmtbs->fetchAll();
-                foreach ($stmtbs as $userPseudo) {
-                }
-                $userPseudo = $userPseudo['Pseudo'];
-                ?>
-
-                
-
-                <div class="info-jeu">
-                    <tr class="bloc-jeu">
-                        <th class="info-joueur">#1</th>
-                        <th class="info-joueur"><?= $nomJeu ?></th>
-                        <th class="info-joueur"><?= $userPseudo ?></th>
-                        <th class="info-joueur">Niveau de difficulté</th>
-                        <th class="info-joueur">Score</th>
-                        <th class="info-joueur">Date</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><?= $reponse['id']; ?></td>
+                        <td><?= $reponse['Nom_du_jeu']; ?></td>
+                        <td><?= $reponse["Pseudo"]; ?></td>
+                        <td><?= $reponse["Difficulte_de_la_partie"]; ?></td>
+                        <td><?= $reponse["Score_de_la_partie"]; ?></td>
                     </tr>
-                    <tr class="bloc-jeu">
-                        <th class="info-joueur">#2</th>
-                        <th class="info-joueur">Nom du jeu</th>
-                        <th class="info-joueur">Pseudo</th>
-                        <th class="info-joueur">Niveau de difficulté</th>
-                        <th class="info-joueur">Score</th>
-                        <th class="info-joueur">Date</th>
-                    </tr>
-                    <tr class="bloc-jeu">
-                        <th class="info-joueur">#3</th>
-                        <th class="info-joueur">Nom du jeu</th>
-                        <th class="info-joueur">Pseudo</th>
-                        <th class="info-joueur">Niveau de difficulté</th>
-                        <th class="info-joueur">Score</th>
-                        <th class="info-joueur">Date</th>
-                    </tr>
-                    <tr class="bloc-jeu">
-                        <th class="info-joueur">#<?= $positions_user ?></th>
-                        <th class="info-joueur">Nom du jeu</th>
-                        <th class="info-joueur">Pseudo</th>
-                        <th class="info-joueur">Niveau de difficulté</th>
-                        <th class="info-joueur">Score</th>
-                        <th class="info-joueur">Date</th>
-                    </tr>
-                </div>
-
-
-
-
+                </tbody>
             </table>
+
+            <!--             <table class="score">
+                <thead>
+                    <div class="info-classement">
+                        <tr class="bloc-classement">
+                            <th class="classement">Top frage</th>
+                            <th class="classement">Nom du jeu</th>
+                            <th class="classement">Pseudo</th>
+                            <th class="classement">Niveau de difficulté</th>
+                            <th class="classement">Score</th>
+                            <th class="classement">Date</th>
+                        </tr>
+                </thead>
         </div>
-        <!--Informations sur les contact et les lieux de location-->
 
-        <!-- Inprotation du footer -->
+        <div class="info-jeu">
+            <tr class="bloc-jeu">
+                <th class="info-joueur">#1</th>
+                <th class="info-joueur">nomJeu</th>
+                <th class="info-joueur">Pseudo</th>
+                <th class="info-joueur">Niveau de difficulté</th>
+                <th class="info-joueur">Score</th>
+                <th class="info-joueur">Date</th>
+            </tr>
+            </table>
+        </div> -->
 
-        <?php
-        require_once 'view/footer.inc.php';
-        ?>
+            <!-- Fin du tableau -->
 
-        <!-- Fin Inprotation du footer -->
+            <!--Informations sur les contact et les lieux de location-->
+
+            <!-- Inprotation du footer -->
+
+            <?php
+            require_once 'view/footer.inc.php';
+            ?>
+
+            <!-- Fin Inprotation du footer -->
 </body>
 
 </html>

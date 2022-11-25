@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 
     if (!isset($_POST['email'])) {
         $valid = false;
-        $err['email'] = " Ce champ en peut pas être vide";
+        $err['email'] = " Ce champ ne peut pas être vide";
     }
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
         $valid = false;
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
 
     if ($password !== $confpassword) {
         $valid = false;
-        $err[''] = "Le mot de passe est différant de la confiramation";
+        $err[''] = "Le mot de passe est différent de la confirmation";
     }
 
     if ($valid == true) {
@@ -99,8 +99,14 @@ if (isset($_POST['submit'])) {
             <input type="text" id="pseudojoueur" name="pseudojoueur" value="<?php if (isset($pseudo)) {echo $pseudo;} ?>" placeholder="Pseudo" />
 
             <input type="password" id="mdp" name="mdp" value="<?php if (isset($password)) {echo $password;} ?>" placeholder="Mot de passe" />
-
+            <div class="barre">
+                <div id="barre1"></div>
+                <div id="barre2"></div>
+                <div id="barre3"></div>
+            </div>
+            <p id="msg">Le mot de passe est <span id="strength"></span></p>
             <input type="password" id="confmdp" name="confmdp" value="<?php if (isset($confpassword)) {echo $confpassword;} ?>" placeholder="Confirmez votre mot de passe" />
+
 
             <button type="submit" value="submit" name="submit" id="submit">Inscription</button>
         </form>
@@ -110,6 +116,7 @@ if (isset($_POST['submit'])) {
         <?php
         require_once 'view/footer.inc.php';
         ?>
+        <script src="/assets/js/inscription.js"></script>
 
         <!-- Fin Improtation du footer -->
 

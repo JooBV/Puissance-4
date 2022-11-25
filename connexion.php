@@ -36,58 +36,6 @@ include "includes/database.inc.php";
     }
 ?>
 
-    // if (isset($_POST['submit'])) {
-
-    //     if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
-    //         echo "L'adresse e-mail est valide";
-    //         $email = $_POST['mail'];
-    //         $errorMess = $conn->prepare('SELECT * FROM utilisateur WHERE Email = ?');
-    //         $errorMess->execute();
-    //     } else {
-    //         echo 'Email invalide';
-    //         $error = true;
-    //     }
-
-    //     if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-    //         $valid = false;
-    //         $err[''] = "Email not valid";
-    //     }
-    // } else {
-    //     echo 'password invalide';
-    //     $error = true;
-    // }
-
-    // if ($mess = $req->fetch()) {
-    //     $_SESSION['user_id'] = $mess['id'];
-    //     header('Location: index.php');
-    //     exit();
-    // } else {
-    //     echo 'Email et mdp invalide';
-    // }
-
-    // /* Partie password */
-
-
-    // if (strlen($_POST['password']) > 8) {
-    //     $password = $_POST['password'];
-    // } else {
-    //     echo 'password invalide';
-    //     $error = true;
-    // }
-
-    // if (!$error) {
-    //     $errorMess = $conn->prepare('SELECT * FROM utilisateur WHERE Email = ? AND Password = ?');
-    //     $errorMess->execute();
-    // }
-
-    // if ($mess = $req->fetch()) {
-    //     $_SESSION['user_id'] = $mess['id'];
-    // } else {
-    //     echo 'Email et mdp invalide';
-    // }
-    ?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 

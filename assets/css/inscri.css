@@ -69,3 +69,30 @@ form button[type="submit"] {
 /* 
 Pied de page
 */
+
+/* Barre mdp */
+
+.barre{
+    display: flex;
+    margin-left: 27%;
+}
+
+#barre1{
+width: 6%;
+height: 10px;
+}
+
+#barre2{
+ width: 6%;
+height: 10px;
+}
+
+#barre3{
+width: 6%;
+height: 10px;
+}
+
+#msg{
+    position: middle;
+    display: none;
+}

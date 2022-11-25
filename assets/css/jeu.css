@@ -21,32 +21,101 @@ body {
     justify-content: center;
     justify-content: space-around;
     align-items: center;
-    background-color: #0e0a28;
-    border-radius: 10px;
-    margin-bottom: 5%;
-
+    background-color: #5b0082;
 }
 
-.les-Difficultes2 {
-
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+.container-difficulty{
+    position: relative;
 }
 
-.lesDifficultes2:hover {
-    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.329);
+.click, .niveau{
+    background-color: #c67700;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    width:160px;
+    color:#fff;
+    transition: 0.3s;
 }
 
-.les-Tableaux {
-    display: flex;
-    flex-direction: column;
-    background-color: #0e0a28;
-    border-radius: 10px;
-    padding-bottom: 10px;
+.list{
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.newlist {
+    transform: scaleY(1);
+}
+
+.niveau{
+    background-color: #283c63;
+}
+
+.niveau:hover{
+    background-color: #01579B;
+    transform: scale(1.1);
+}
+
+.show {
+    display:block;
+}
+
+/* Theme */
+
+.container-theme{
+    margin-right: 60%;
+    position: relative;
+}
+
+.clickThemes, .theme{
+    background-color: #c67700;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    width:140px;
+    color:#fff;
+    transition: 0.3s;
+}
+
+.listTheme{
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.newtheme {
+    transform: scaleY(1);
+}
+
+.theme{
+    background-color: #283c63;
+}
+
+.theme:hover{
+    background-color: #01579B;
+    transform: scale(1.1);
+}
+
+.show {
+    display:block;
+}
 
 
+
+
+
+.les-Tableaux{
+/*     background: linear-gradient(to bottom, #5cf, #28e);
+	border-radius: 5.5em; */
+	display: flex;
+	justify-content: space-around;
 }
 
 .tableau1 {
@@ -60,71 +129,11 @@ body {
 .td1 {
     border-radius: 5px;
     width: 100px;
+    display: flex;
     height: 100px;
-    background-color: rgb(255, 213, 0);
-}
-
-.box1 {
-    display: flex;
-    justify-content: center;
-}
-
-.tableau2 {
-    background-color: rgb(56, 56, 56);
-    border-spacing: 5px;
-    border-radius: 5px;
-    margin-right: auto; 
-    margin-left: auto
-}
-
-.td2 {
-    border-radius: 5px;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(255, 213, 0);
-}
-
-.box2 {
-    display: flex;
-    justify-content: center;
-}
-
-.tableau3 {
-    background-color: rgb(56, 56, 56);
-    border-spacing: 5px;
-    border-radius: 5px;
-    margin-right: auto; 
-    margin-left: auto
-}
-
-.td3 {
-    border-radius: 5px;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(255, 213, 0);
-}
-
-.box3 {
-    display: flex;
-    justify-content: center;
-}
-
-.tableau4 {
-    background-color: rgb(56, 56, 56);
-    border-spacing: 5px;
-    border-radius: 5px;
-    margin-right: auto; 
-    margin-left: auto
-}
-
-.td4 {
-    border-radius: 5px;
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 213, 0);
-}
-
-.box4 {
-    display: flex;
-    justify-content: center;
+    background: #d99f00;
+    float: left;
+    margin: 11px 0 0 10px;
+    align-items: center;
+    justify-content: space-around;
 }
