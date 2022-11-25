@@ -1,13 +1,13 @@
 <?php
-include "assets/includes/database.inc.php";
+include "includes/database.inc.php";
 
-$scores = $bdd->prepare ('SELECT jeu.nomJeu, pseudo, score, niveau, date_heure_partie FROM score
+$requet = $conn->prepare ('SELECT jeu.nom_du_jeu,Ppseudo, Score_de_la_partie, Difficulte_du_jeu, Date_heure_partie FROM Score_de_la_partie
 INNER JOIN utilisateur ON score.id_joueur = utilisateur.id
 INNER JOIN jeu ON score.id_jeu = jeu.id
 ORDER BY score DESC');
 
-$scores->execute();
-$scores = $scores-> fetchAll();
+$requet->execute();
+$reponse = $requet-> fetchAll();
 
 ?>
 
@@ -53,11 +53,11 @@ $scores = $scores-> fetchAll();
 
                             <tr>
 
-                            <td> <?php echo $score['nomJeu'] ?> </td>
-                            <td> <?php echo $score['pseudo'] ?></td>
-                            <td> <?php echo $score['score'] ?></td>
-                            <td> <?php echo $score['niveau'] ?></td>
-                            <td> <?php echo $score['date_heure_partie'] ?> </td>
+                            <td> <?php echo $reponse['Nom_du_jeu'] ?> </td>
+                            <td> <?php echo $reponse['Pseudo'] ?></td>
+                            <td> <?php echo $reponse['Score_de_la_partie'] ?></td>
+                            <td> <?php echo $reponse['Diificulte_de_la_partie'] ?></td>
+                            <td> <?php echo $reponse['Date_heure_partie'] ?> </td>
 
                             </tr>
 
